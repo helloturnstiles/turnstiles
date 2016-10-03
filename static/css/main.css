@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  color: #1565c0;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5625em;
+  line-height: 1.5;
+  margin: 0 0 0.75em;
+}
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+}
+
+nav:last-child {
+  margin-right: 0;
+}
+
+article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+
+article:last-child {
+  margin-right: 0;
+}
+
+article h2 {
+  font-size: 1.5625em;
+  line-height: 1.5;
+  margin: 0.75em 0 0 0;
+}
+
+article ul {
+  list-style: none;
+}
+
+article ul li header {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 22.316%;
+}
+
+article ul li header:last-child {
+  margin-right: 0;
+}
+
+article ul li header:before {
+  content: "+";
+  margin-right: 1em;
+}
+
+article ul li q {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 35.26333%;
+  font-style: italic;
+}
+
+article ul li q:last-child {
+  margin-right: 0;
+}
+
+article ul li aside {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 35.26333%;
+  margin-right: 0;
+}
+
+article ul li aside:last-child {
+  margin-right: 0;
+}

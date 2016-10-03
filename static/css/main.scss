@@ -1,0 +1,113 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+// $base-font-family: $font-stack-system;
+// $heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.5;
+
+$modular-scale-ratio: $perfect-fifth;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$cornflower: #13253d;
+
+// Font Colors
+$base-font-color: $blue;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+
+body{
+  font-family: $font-stack-helvetica;
+  font-weight: bold;
+}
+
+
+
+body {
+  color: $base-font-color;
+  // font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: modular-scale(2);
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+
+
+
+main{
+  @include outer-container;
+}
+
+nav{ @include span-columns(2) }
+
+article{
+
+  @include span-columns(8)
+
+  h2{
+    font-size: modular-scale(2);
+    line-height: $heading-line-height;
+    margin: $small-spacing 0 0 0;
+  }
+
+  ul{
+    list-style:none;
+
+    li{
+      header  { @include span-columns(2 of 8);  }
+      header:before {
+        content: "+";
+        margin-right: 1em;
+      }
+      q { @include span-columns(3 of 8); font-style: italic;}
+      aside   { @include span-columns(3 of 8); @include omega(); }
+    }
+
+  }
+}
